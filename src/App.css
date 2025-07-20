@@ -1,0 +1,56 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: grid;
+  grid-template-areas: 
+    "head head"
+    "stats-left stats-right"
+    "dice dice"
+    "button button"
+    "score score"
+  ;
+}
+
+.dice-container{
+  grid-area: dice;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(5, 1fr);
+  gap: 10px;
+}
+
+.dice-container > button {
+  height: 50px;
+  width: 50px
+}
+
+.dice-container > button.held{
+  background-color: green;
+}
+
+.rollButton{
+  grid-area: button;
+  margin: 20px;
+  padding: 10px;
+}
+
+.scoreSection{
+  grid-area: score;
+  text-align: center;
+}
+
+ul>li{
+  list-style: none;
+  text-align: center;
+}
+
+.score{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.highscore {
+  color: green
+}
