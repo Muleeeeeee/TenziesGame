@@ -55,7 +55,7 @@ function App() {
     setRollCount(0);
     setGameCount((prev) => prev + 1);
     setScores(prev => {
-      // aktualisiertes Scores Array schreiben
+      // Write updated scores array
       const newScores = [
         ...prev,
         {
@@ -65,7 +65,7 @@ function App() {
           id: nanoid()
         }
       ]
-      // Aktuellen Highscore bestimmen und in newScores anpassen
+      // Determine current high score and adjust in newScores
       if(newScores.length > 0){
         const highScoreId = newScores.reduce((min, current) =>
           current.rollCount < min.rollCount ? current : min).id;
@@ -76,7 +76,7 @@ function App() {
         )
       }
 
-      // return score list
+      // Return score list
       return newScores
     }
     )
